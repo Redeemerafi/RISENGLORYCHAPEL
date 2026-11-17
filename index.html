@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Risen Glory Chapel | Finding Peace in God's Presence</title>
+  <meta name="description" content="Welcome to Risen Glory Chapel, Teshie LEKMA, Accra. Led by Rev. Isaac Opoku Agyemang. Join our Tuesday Online Prayer Altar, Friday Financial Giants, and Widowhood Support Program.">
+
   <style>
     :root {
+      --burgundy-950: #29030b;
       --burgundy-900: #3b0610;
       --burgundy-800: #520a17;
       --burgundy-700: #6e0e22;
@@ -14,10 +17,12 @@
       --gold-600: #b8861e;
       --gold-500: #d4a329;
       --gold-400: #e6b83f;
+      --gold-200: #f4d88e;
       --gold-100: #fdf5e2;
       --gold-50: #fffbf3;
       --dark: #1a1415;
       --charcoal: #2d2627;
+      --grey-700: #494042;
       --grey-600: #62585a;
       --grey-400: #9e9395;
       --grey-200: #e8e2e3;
@@ -39,16 +44,16 @@
 
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--charcoal);
       background-color: var(--white);
       line-height: 1.6;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
       overflow-x: hidden;
       width: 100%;
+      -webkit-text-size-adjust: 100%;
     }
 
     a {
@@ -64,7 +69,7 @@
 
     /* Top Announcement Bar */
     .top-banner {
-      background: var(--burgundy-900);
+      background: var(--burgundy-950);
       color: var(--gold-400);
       font-size: 13px;
       font-weight: 600;
@@ -73,7 +78,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
       line-height: 1.4;
     }
@@ -81,6 +86,7 @@
     .top-banner a {
       color: var(--white);
       text-decoration: underline;
+      font-weight: 700;
       white-space: nowrap;
     }
 
@@ -103,7 +109,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
     }
 
     .brand {
@@ -122,28 +128,25 @@
     }
 
     .brand-text {
+      display: flex;
+      flex-direction: column;
       min-width: 0;
     }
 
-    .brand-text h1 {
+    .brand-title {
       font-size: 17px;
       font-weight: 800;
       color: var(--burgundy-800);
       line-height: 1.2;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    .brand-text p {
+    .brand-tagline {
       font-size: 11px;
       color: var(--gold-600);
       font-weight: 700;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.3;
     }
 
     .nav-links {
@@ -167,13 +170,13 @@
     .btn-nav {
       background: var(--burgundy-700);
       color: var(--white);
-      padding: 10px 18px;
+      padding: 9px 18px;
       border-radius: var(--radius-sm);
       font-size: 13px;
       font-weight: 700;
       white-space: nowrap;
       flex-shrink: 0;
-      transition: background 0.2s, transform 0.1s;
+      transition: background 0.2s;
     }
 
     .btn-nav:hover {
@@ -185,7 +188,7 @@
       position: relative;
       background: var(--burgundy-800);
       color: var(--white);
-      padding: 70px 20px 65px;
+      padding: 75px 20px 70px;
       text-align: center;
       width: 100%;
     }
@@ -202,7 +205,7 @@
       background: rgba(255, 255, 255, 0.12);
       border: 1px solid rgba(212, 163, 41, 0.4);
       color: var(--gold-400);
-      padding: 6px 16px;
+      padding: 6px 18px;
       border-radius: 30px;
       font-size: 12px;
       font-weight: 700;
@@ -212,7 +215,7 @@
     }
 
     .hero h2 {
-      font-size: 42px;
+      font-size: 44px;
       font-weight: 900;
       line-height: 1.2;
       margin-bottom: 18px;
@@ -225,7 +228,7 @@
 
     .hero p {
       font-size: 17px;
-      color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.92);
       max-width: 680px;
       margin: 0 auto 30px;
       font-weight: 400;
@@ -242,18 +245,18 @@
     .btn-gold {
       background: var(--gold-500);
       color: var(--burgundy-900);
-      padding: 13px 24px;
+      padding: 13px 26px;
       border-radius: var(--radius-sm);
       font-size: 15px;
       font-weight: 800;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(212, 163, 41, 0.3);
-      transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(212, 163, 41, 0.3);
     }
 
     .btn-gold:hover {
@@ -264,17 +267,17 @@
     .btn-outline {
       background: transparent;
       color: var(--white);
-      padding: 13px 24px;
+      padding: 13px 26px;
       border-radius: var(--radius-sm);
       font-size: 15px;
       font-weight: 700;
       border: 1.5px solid rgba(255, 255, 255, 0.5);
       cursor: pointer;
-      transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      transition: all 0.2s ease;
     }
 
     .btn-outline:hover {
@@ -302,7 +305,7 @@
     }
 
     .ribbon-item {
-      padding: 20px;
+      padding: 22px 20px;
       display: flex;
       align-items: center;
       gap: 14px;
@@ -314,8 +317,8 @@
     }
 
     .ribbon-icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
       background: var(--burgundy-50);
       color: var(--burgundy-700);
@@ -330,16 +333,18 @@
       font-weight: 800;
       color: var(--burgundy-900);
       margin-bottom: 2px;
+      line-height: 1.3;
     }
 
     .ribbon-text p {
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--grey-600);
+      line-height: 1.3;
     }
 
     /* Common Section Styles */
     section {
-      padding: 60px 20px;
+      padding: 65px 20px;
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
@@ -347,7 +352,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 40px;
     }
 
@@ -365,7 +370,7 @@
       font-weight: 900;
       color: var(--burgundy-900);
       line-height: 1.25;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .section-desc {
@@ -374,12 +379,60 @@
       line-height: 1.6;
     }
 
+    /* About Pillars */
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      border: 1px solid var(--grey-200);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: var(--gold-500);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--burgundy-50);
+      color: var(--burgundy-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .pillar-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      margin-bottom: 8px;
+    }
+
+    .pillar-card p {
+      font-size: 14px;
+      color: var(--grey-600);
+      line-height: 1.5;
+    }
+
     /* Overseer Section */
     .overseer-wrap {
       background: var(--gold-50);
-      border: 1px solid rgba(212, 163, 41, 0.3);
+      border: 1px solid rgba(212, 163, 41, 0.35);
       border-radius: var(--radius-lg);
-      padding: 40px;
+      padding: 44px;
       display: grid;
       grid-template-columns: 340px 1fr;
       gap: 40px;
@@ -406,7 +459,7 @@
       bottom: 14px;
       left: 14px;
       right: 14px;
-      background: rgba(59, 6, 16, 0.92);
+      background: rgba(59, 6, 16, 0.94);
       color: var(--white);
       padding: 10px 14px;
       border-radius: var(--radius-sm);
@@ -444,14 +497,14 @@
     }
 
     .overseer-quote {
-      font-size: 17px;
+      font-size: 16.5px;
       font-style: italic;
       color: var(--burgundy-800);
       border-left: 4px solid var(--gold-500);
       padding-left: 18px;
       margin-bottom: 18px;
       font-weight: 500;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .overseer-bio {
@@ -471,9 +524,9 @@
 
     .program-card {
       background: var(--white);
-      border: 1px solid var(--grey-200);
+      border: 1.5px solid var(--gold-500);
       border-radius: var(--radius-md);
-      padding: 26px;
+      padding: 28px;
       transition: all 0.2s ease;
       display: flex;
       flex-direction: column;
@@ -481,18 +534,17 @@
     }
 
     .program-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-md);
-      border-color: var(--gold-500);
     }
 
     .program-time-pill {
       display: inline-block;
-      background: var(--burgundy-50);
-      color: var(--burgundy-700);
+      background: var(--gold-500);
+      color: var(--burgundy-950);
       font-weight: 800;
       font-size: 12px;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
       margin-bottom: 14px;
       text-transform: uppercase;
@@ -501,85 +553,109 @@
     }
 
     .program-card h4 {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
       color: var(--burgundy-900);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .program-card p {
-      font-size: 14px;
-      color: var(--grey-600);
-      margin-bottom: 14px;
-      line-height: 1.5;
+      font-size: 14.5px;
+      color: var(--grey-700);
+      line-height: 1.6;
     }
 
-    /* Featured Event: Widowhood Support Program Conference */
-    .event-featured {
-      background: var(--burgundy-800);
-      color: var(--white);
+    /* Redesigned Clean Outreach Event Card */
+    .event-card {
+      background: var(--gold-50);
+      border: 2px solid var(--burgundy-700);
       border-radius: var(--radius-lg);
       padding: 40px;
-      margin-top: 40px;
+      margin-top: 36px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 36px;
       align-items: center;
-      border: 2px solid var(--gold-500);
+      box-shadow: var(--shadow-md);
+    }
+
+    .event-card-left {
+      display: flex;
+      flex-direction: column;
     }
 
     .event-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--gold-500);
-      color: var(--burgundy-900);
+      display: inline-block;
+      background: var(--burgundy-700);
+      color: var(--white);
       padding: 5px 14px;
-      border-radius: 30px;
+      border-radius: 20px;
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
+      letter-spacing: 0.6px;
       margin-bottom: 12px;
+      align-self: flex-start;
     }
 
-    .event-featured h3 {
+    .event-card h3 {
       font-size: 28px;
       font-weight: 900;
+      color: var(--burgundy-900);
       margin-bottom: 12px;
       line-height: 1.2;
     }
 
-    .event-featured p {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 18px;
+    .event-card-desc {
+      font-size: 14.5px;
+      color: var(--grey-700);
+      margin-bottom: 22px;
       line-height: 1.6;
     }
 
-    .event-details-list {
-      list-style: none;
+    .event-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+      background: var(--white);
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(212, 163, 41, 0.35);
+    }
+
+    .meta-box {
       display: flex;
       flex-direction: column;
-      gap: 10px;
     }
 
-    .event-details-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 600;
+    .meta-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--burgundy-700);
+      margin-bottom: 2px;
     }
 
-    .event-details-list svg {
-      flex-shrink: 0;
+    .meta-detail {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--burgundy-950);
+      line-height: 1.3;
     }
 
-    .event-flyer-box img {
+    .event-flyer-wrap {
+      text-align: center;
+    }
+
+    .event-flyer-wrap img {
       width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-md);
       border: 2px solid var(--gold-500);
+      box-shadow: var(--shadow-md);
     }
 
     /* Gallery Teaser Preview */
@@ -587,7 +663,7 @@
       background: var(--white);
       border: 1px solid var(--grey-200);
       border-radius: var(--radius-lg);
-      padding: 36px 24px;
+      padding: 34px 24px;
       text-align: center;
       box-shadow: var(--shadow-sm);
     }
@@ -595,16 +671,23 @@
     .gallery-teaser-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 18px;
       margin-bottom: 24px;
     }
 
     .gallery-teaser-grid img {
       width: 100%;
-      height: 190px;
+      height: 250px;
       object-fit: cover;
       border-radius: var(--radius-sm);
       border: 1px solid var(--grey-200);
+      background: var(--grey-100);
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-teaser-grid img:hover {
+      transform: scale(1.02);
+      border-color: var(--gold-500);
     }
 
     .gallery-preview h3 {
@@ -615,42 +698,42 @@
     }
 
     .gallery-preview p {
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--grey-600);
       max-width: 580px;
       margin: 0 auto 20px;
+      line-height: 1.5;
     }
 
-    /* Consultation & Prayer Form Section */
+    /* Consultation & Prayer Form */
     .form-section-bg {
-      background: var(--gold-50);
-      padding: 60px 20px;
-      border-top: 1px solid rgba(212, 163, 41, 0.2);
-      border-bottom: 1px solid rgba(212, 163, 41, 0.2);
+      background: var(--burgundy-50);
+      border-top: 1px solid var(--grey-200);
+      border-bottom: 1px solid var(--grey-200);
+      padding: 70px 20px;
       width: 100%;
     }
 
     .form-wrapper {
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
       background: var(--white);
       border-radius: var(--radius-lg);
-      padding: 38px 30px;
-      box-shadow: var(--shadow-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
       border: 1px solid var(--grey-200);
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
       margin-bottom: 20px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 6px;
     }
 
     .form-group.full-width {
@@ -660,49 +743,57 @@
     .form-group label {
       font-size: 13px;
       font-weight: 700;
-      color: var(--charcoal);
+      color: var(--burgundy-900);
+      margin-bottom: 6px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       padding: 12px 14px;
-      border: 1.5px solid var(--grey-200);
       border-radius: var(--radius-sm);
-      font-size: 16px; /* Prevents mobile browser auto-zoom */
-      font-family: inherit;
+      border: 1px solid var(--grey-400);
+      font-size: 16px;
       color: var(--charcoal);
       outline: none;
-      transition: border-color 0.2s ease;
-      width: 100%;
+      font-family: inherit;
       background: var(--white);
+      transition: border-color 0.2s ease;
     }
 
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: var(--burgundy-700);
+      box-shadow: 0 0 0 2px rgba(110, 14, 34, 0.12);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
     }
 
     .form-submit-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
       margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     .btn-submit {
       background: var(--burgundy-700);
       color: var(--white);
-      padding: 13px 30px;
+      padding: 14px 28px;
       border-radius: var(--radius-sm);
       font-size: 15px;
       font-weight: 800;
       border: none;
       cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s ease;
     }
 
     .btn-submit:hover {
@@ -710,95 +801,41 @@
     }
 
     .direct-call-hint {
+      text-align: center;
       font-size: 13px;
       color: var(--grey-600);
+      line-height: 1.4;
     }
 
     .direct-call-hint a {
       color: var(--burgundy-700);
       font-weight: 700;
+      text-decoration: underline;
     }
 
-    /* Modal for Form Confirmation */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
-      backdrop-filter: blur(4px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      padding: 16px;
-    }
-
-    .modal-card {
-      background: var(--white);
-      max-width: 480px;
-      width: 100%;
-      border-radius: var(--radius-md);
-      padding: 30px 24px;
-      text-align: center;
-      box-shadow: var(--shadow-lg);
-      border: 2px solid var(--gold-500);
-    }
-
-    .modal-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: var(--gold-100);
-      color: var(--gold-600);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-    }
-
-    .modal-card h3 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--burgundy-900);
-      margin-bottom: 8px;
-    }
-
-    .modal-card p {
-      font-size: 13px;
-      color: var(--grey-600);
-      margin-bottom: 20px;
-    }
-
-    .modal-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    /* Contact & Location */
+    /* Contact Section */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
+      gap: 24px;
+      margin-bottom: 36px;
     }
 
     .contact-card {
       background: var(--white);
       border: 1px solid var(--grey-200);
       border-radius: var(--radius-md);
-      padding: 24px 20px;
+      padding: 26px 20px;
       text-align: center;
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .contact-card .icon {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--burgundy-50);
       color: var(--burgundy-700);
@@ -812,19 +849,18 @@
       font-size: 16px;
       font-weight: 800;
       color: var(--burgundy-900);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
-    .contact-card p, .contact-card a {
-      font-size: 13px;
+    .contact-card p {
+      font-size: 13.5px;
       color: var(--grey-600);
-      word-break: break-word;
+      line-height: 1.5;
+      margin-bottom: 14px;
     }
 
-    /* Map Box */
+    /* Embedded Google Map */
     .map-box {
-      margin-top: 32px;
-      background: var(--white);
       border: 1px solid var(--grey-200);
       border-radius: var(--radius-md);
       overflow: hidden;
@@ -832,19 +868,18 @@
     }
 
     .map-box-header {
-      padding: 14px 20px;
-      background: var(--burgundy-50);
-      border-bottom: 1px solid var(--grey-200);
+      background: var(--grey-100);
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 10px;
     }
 
     .map-box-header span {
-      font-weight: 800;
       font-size: 13px;
+      font-weight: 700;
       color: var(--burgundy-900);
       display: flex;
       align-items: center;
@@ -853,9 +888,9 @@
 
     /* Footer */
     footer {
-      background: var(--burgundy-900);
+      background: var(--burgundy-950);
       color: var(--white);
-      padding: 50px 20px 24px;
+      padding: 50px 20px 30px;
       border-top: 4px solid var(--gold-500);
       width: 100%;
     }
@@ -865,9 +900,8 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: 36px;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 40px;
+      margin-bottom: 36px;
     }
 
     .footer-brand {
@@ -880,41 +914,43 @@
     .footer-brand img {
       width: 44px;
       height: 44px;
+      object-fit: contain;
       border-radius: 50%;
     }
 
     .footer-brand h3 {
-      font-size: 17px;
-      color: var(--white);
+      font-size: 18px;
       font-weight: 800;
+      color: var(--white);
     }
 
     .footer-col p {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.75);
       line-height: 1.6;
+      max-width: 360px;
     }
 
     .footer-col h5 {
       font-size: 14px;
       font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
       color: var(--gold-400);
       margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
     .footer-links {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .footer-links a {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.8);
-      transition: color 0.2s;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.85);
+      transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
@@ -923,20 +959,108 @@
 
     .footer-bottom {
       max-width: 1200px;
-      margin: 20px auto 0;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       font-size: 12px;
       color: rgba(255, 255, 255, 0.6);
       flex-wrap: wrap;
       gap: 10px;
     }
 
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(41, 3, 11, 0.7);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid var(--gold-500);
+      box-shadow: var(--shadow-lg);
+      animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--burgundy-50);
+      color: var(--burgundy-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .modal-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      margin-bottom: 8px;
+    }
+
+    .modal-card p {
+      font-size: 14px;
+      color: var(--grey-600);
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     /* ==============================================================
-       MOBILE FIRST RESPONSIVE BREAKPOINTS (max-width: 860px / 600px)
+       RESPONSIVE DESIGN (Tablets & Mobile)
        ============================================================== */
     @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .brand-title {
+        font-size: 15px;
+      }
+      .brand-tagline {
+        font-size: 10px;
+      }
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+      .btn-nav {
+        padding: 7px 12px;
+        font-size: 12px;
+      }
       .service-ribbon {
         grid-template-columns: 1fr;
       }
@@ -948,6 +1072,10 @@
       .ribbon-item:last-child {
         border-bottom: none;
       }
+      .about-pillars {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
       .overseer-wrap {
         grid-template-columns: 1fr;
         padding: 24px 18px;
@@ -957,13 +1085,17 @@
         height: 320px;
       }
       .programs-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         gap: 18px;
       }
-      .event-featured {
+      .event-card {
         grid-template-columns: 1fr;
         padding: 24px 18px;
         gap: 24px;
+      }
+      .event-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
       .gallery-teaser-grid {
         grid-template-columns: 1fr;
@@ -998,10 +1130,7 @@
         font-size: 15px;
         margin-bottom: 24px;
       }
-      .btn-gold, .btn-outline {
-        width: 100%;
-      }
-      .btn-submit {
+      .btn-gold, .btn-outline, .btn-submit {
         width: 100%;
       }
       .section-title {
@@ -1010,23 +1139,6 @@
       .section-desc {
         font-size: 14px;
       }
-      .nav-links {
-        display: none;
-      }
-      .btn-nav {
-        padding: 8px 12px;
-        font-size: 12px;
-      }
-      .brand-text h1 {
-        font-size: 15px;
-      }
-      .brand-text p {
-        font-size: 10px;
-      }
-      .brand img {
-        width: 40px;
-        height: 40px;
-      }
     }
 
     @media (max-width: 480px) {
@@ -1034,11 +1146,11 @@
         font-size: 12px;
         padding: 8px 12px;
       }
-      .hero h2 {
-        font-size: 25px;
-      }
-      .hero p {
+      .brand-title {
         font-size: 14px;
+      }
+      .brand-tagline {
+        font-size: 9.5px;
       }
       .service-ribbon-wrapper {
         margin: -15px auto 30px;
@@ -1050,11 +1162,8 @@
       .overseer-content h3 {
         font-size: 24px;
       }
-      .overseer-quote {
-        font-size: 15px;
-      }
-      .event-featured h3 {
-        font-size: 23px;
+      .event-card h3 {
+        font-size: 22px;
       }
       .map-box-header a {
         width: 100%;
@@ -1068,7 +1177,7 @@
 
   <!-- Top Announcement Bar -->
   <div class="top-banner">
-    <span>🕊️ Widowhood Support Program Conference — Sun, 20th Dec 2026 at Teshie, LEKMA.</span>
+    <span>🕊️ Widowhood Support Program Conference — Sunday, 20th Dec 2026 at Teshie, LEKMA.</span>
     <a href="#featured-event">View Details & Donate</a>
   </div>
 
@@ -1078,8 +1187,8 @@
       <a href="#" class="brand">
         <img src="assets/logo.png" alt="Risen Glory Chapel Logo">
         <div class="brand-text">
-          <h1>Risen Glory Chapel</h1>
-          <p>Finding Peace in God's Presence</p>
+          <span class="brand-title">Risen Glory Chapel</span>
+          <span class="brand-tagline">Finding Peace in God's Presence</span>
         </div>
       </a>
       <ul class="nav-links">
@@ -1097,25 +1206,22 @@
   <header class="hero">
     <div class="hero-container">
       <div class="hero-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M7 8h10"/></svg>
         Welcome to Risen Glory Chapel
       </div>
       <h2>Finding Peace in <span>God's Presence</span></h2>
       <p>A Bible-believing, loving, and Spirit-filled family in Teshie, Accra. Join us to experience the transformative power of God's Word, heartfelt worship, and genuine fellowship.</p>
       <div class="hero-actions">
         <a href="#consultation" class="btn-gold">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           Request Consultation / Prayer
         </a>
         <a href="#programs" class="btn-outline">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           View Weekly Programs
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Service Times Ribbon -->
+  <!-- Fast Info Ribbon -->
   <div class="service-ribbon-wrapper">
     <div class="service-ribbon">
       <div class="ribbon-item">
@@ -1141,7 +1247,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div class="ribbon-text">
-          <h4>Church Location</h4>
+          <h4>Church Assembly Location</h4>
           <p>Teshie Manhean, LEKMA, Accra</p>
         </div>
       </div>
@@ -1154,6 +1260,32 @@
       <div class="section-kicker">Who We Are</div>
       <h2 class="section-title">A Sanctuary of Hope & Spiritual Awakening</h2>
       <p class="section-desc">At Risen Glory Chapel, our heartbeat is to build people of purpose, foster unshakeable faith in Jesus Christ, and share God's unconditional love across our community.</p>
+    </div>
+
+    <div class="about-pillars">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M7 8h10"/></svg>
+        </div>
+        <h3>Prophetic Prayer & Revival</h3>
+        <p>Experiencing the power of targeted prayer, spiritual deliverance, and supernatural restoration through the Holy Spirit.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3>Biblical Truth & Growth</h3>
+        <p>Grounding believers in the uncompromised Word of God with practical wisdom for everyday living, business, and family.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Loving Care & Outreach</h3>
+        <p>Demonstrating Christ's compassion through active charity missions, including our annual Widowhood Support Program.</p>
+      </div>
     </div>
   </section>
 
@@ -1175,11 +1307,13 @@
           "You are never alone. In God's presence, there is fullness of joy, healing, and an unshakeable peace that surpasses all human understanding."
         </div>
         <p class="overseer-bio">
-          Rev. Isaac Opoku Agyemang is a devoted teacher of the Gospel, visionary leader, and pastor with a heart for soul-winning and kingdom impact. Through prophetic prayer, sound biblical doctrine, and pastoral counseling, he has ministered hope and direction to hundreds of families across Accra and beyond.
+          Rev. Isaac Opoku Agyemang is a devoted teacher of the Gospel, visionary leader, and pastor with a heart for soul-winning and kingdom impact. Through prophetic prayer, sound biblical doctrine, and pastoral counseling, he ministers hope and divine direction to families across Accra and beyond.
         </p>
-        <a href="#consultation" class="btn-gold" style="width: 100%;">
-          Schedule A Meeting With The Pastor
-        </a>
+        <div>
+          <a href="#consultation" class="btn-gold">
+            Schedule A Meeting With The Pastor
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1193,53 +1327,62 @@
     </div>
 
     <div class="programs-grid">
-      <div class="program-card" style="border-color: var(--gold-500); background: var(--gold-50);">
-        <span class="program-time-pill" style="background: var(--gold-500); color: var(--burgundy-900);">Every Tuesday • 8:30 PM - 9:30 PM</span>
-        <h4>Tuesday Online Prayer Altar</h4>
-        <p>Anointed virtual prayer altar with Rev. Isaac Opoku Agyemang streaming live on Facebook, Google Meet, and TikTok Live (8:30 PM – 9:30 PM).</p>
-        <div style="font-size: 13px; font-weight: 700; color: var(--burgundy-700);">Online Gathering (Facebook, Meet, TikTok)</div>
+      <!-- Tuesday Program -->
+      <div class="program-card">
+        <div>
+          <span class="program-time-pill">Online • Every Tuesday • 8:30 PM – 9:30 PM</span>
+          <h4>Tuesday Online Prayer Altar</h4>
+          <p>Join Rev. Isaac Opoku Agyemang every Tuesday from 8:30 PM to 9:30 PM for an anointed hour of prophetic prayer and spiritual revival, streaming live online on Facebook, Google Meet, and TikTok Live.</p>
+        </div>
       </div>
 
-      <div class="program-card" style="border-color: var(--gold-500); background: var(--gold-50);">
-        <span class="program-time-pill" style="background: var(--gold-500); color: var(--burgundy-900);">Every Friday • 9:20 PM - 10:00 PM</span>
-        <h4>Financial Giants (Online)</h4>
-        <p>Prophetic empowerment and financial breakthrough service ministered by Rev. Isaac Opoku Agyemang, streaming live on WhatsApp, Google Meet & TikTok Live.</p>
-        <div style="font-size: 13px; font-weight: 700; color: var(--burgundy-700);">Online Gathering (WhatsApp, Meet, TikTok Live)</div>
+      <!-- Friday Program -->
+      <div class="program-card">
+        <div>
+          <span class="program-time-pill">Online • Every Friday • 9:20 PM – 10:00 PM</span>
+          <h4>Financial Giants (Online)</h4>
+          <p>Join Rev. Isaac Opoku Agyemang every Friday from 9:20 PM to 10:00 PM for prophetic prayers and financial empowerment, streaming live online on WhatsApp, Google Meet, and TikTok Live.</p>
+        </div>
       </div>
     </div>
 
     <!-- Featured Event Card: Widowhood Support Program Conference -->
-    <div class="event-featured" id="featured-event">
-      <div class="event-box-left">
+    <div class="event-card" id="featured-event">
+      <div class="event-card-left">
         <span class="event-badge">Upcoming Major Outreach Conference</span>
         <h3>Widowhood Support Program Conference</h3>
-        <p>Pure religion before God is visiting widows and the vulnerable in their distress. Join hands with Rev. Isaac Opoku Agyemang and Risen Glory Chapel this December as we provide food items, financial gifts, and loving care to widows.</p>
-        <ul class="event-details-list">
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <strong>Date:</strong> Sunday, 20th December 2026
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <strong>Time:</strong> 8:00 AM
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <strong>Venue:</strong> Risen Glory Chapel, Teshie, LEKMA
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/></svg>
-            <strong>Donation Cut-off:</strong> Kindly give before 12th Dec 2026
-          </li>
-        </ul>
-        <div style="margin-top: 22px;">
-          <a href="#consultation" class="btn-gold" style="width: 100%;">
+        <p class="event-card-desc">
+          Pure religion before God is visiting widows and the vulnerable in their distress. Join hands with Rev. Isaac Opoku Agyemang and Risen Glory Chapel this December as we provide food items, clothing, and financial assistance to widows across our community.
+        </p>
+        
+        <div class="event-meta-grid">
+          <div class="meta-box">
+            <span class="meta-title">Event Date</span>
+            <span class="meta-detail">Sunday, 20th December 2026</span>
+          </div>
+          <div class="meta-box">
+            <span class="meta-title">Starting Time</span>
+            <span class="meta-detail">8:00 AM Prompt</span>
+          </div>
+          <div class="meta-box">
+            <span class="meta-title">Assembly Venue</span>
+            <span class="meta-detail">Risen Glory Chapel, Teshie, LEKMA</span>
+          </div>
+          <div class="meta-box">
+            <span class="meta-title">Donation Cut-off</span>
+            <span class="meta-detail">Kindly give before 12th Dec 2026</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="#consultation" class="btn-gold">
             Support & Partner: 0244 716877
           </a>
         </div>
       </div>
-      <div class="event-flyer-box">
-        <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program Conference Flyer" style="width: 100%; max-width: 440px; margin: 0 auto; display: block; border-radius: var(--radius-md);">
+
+      <div class="event-flyer-wrap">
+        <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program Conference Flyer">
       </div>
     </div>
   </section>
@@ -1261,7 +1404,7 @@
       <h3>Church Activity & Event Photos</h3>
       <p>Visit our dedicated gallery page to view snapshots of our weekly gatherings, charity missions, prayer altars, and fellowship moments.</p>
       
-      <a href="gallery.html" class="btn-gold" style="display: inline-flex; margin-top: 8px;">
+      <a href="gallery.html" class="btn-gold" style="display: inline-flex;">
         Open Full Photo Gallery Page
       </a>
     </div>
@@ -1296,7 +1439,7 @@
           <div class="form-group">
             <label for="requestType">Nature of Request</label>
             <select id="requestType" name="requestType" required>
-              <option value="">Select an option</option>
+              <option value="" disabled selected>Select request category</option>
               <option value="Pastoral Consultation & Counseling">Pastoral Consultation & Counseling</option>
               <option value="Personal Prayer Request">Personal Prayer Request</option>
               <option value="Widowhood Program Support & Donation">Widowhood Program Support & Donation</option>
@@ -1307,17 +1450,17 @@
 
           <div class="form-group full-width">
             <label for="message">How can we assist or pray with you?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your request, prayer points, or consultation details..." required></textarea>
+            <textarea id="message" name="message" placeholder="Please share your prayer request, counseling need, or support inquiry here..." required></textarea>
           </div>
         </div>
 
         <div class="form-submit-row">
           <button type="submit" class="btn-submit">
-            Submit Request
+            Submit Request to Pastoral Team
           </button>
-          <div class="direct-call-hint">
-            Urgent need? Call or WhatsApp: <a href="tel:+233244716877">0244 716877</a>
-          </div>
+          <p class="direct-call-hint">
+            Urgent prayer or counseling needed? Call or WhatsApp Church Office directly on <a href="tel:+233244716877">+233 24 471 6877</a>.
+          </p>
         </div>
       </form>
     </div>
@@ -1340,8 +1483,7 @@
           <h4>Location & Assembly</h4>
           <p>Teshie Manhean, LEKMA<br>Greater Accra Region, Ghana</p>
         </div>
-        <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="margin-top: 14px; font-size: 13px; padding: 10px 14px; width: 100%;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="font-size: 13px; padding: 10px 14px;">
           Get Directions on Google Maps
         </a>
       </div>
@@ -1354,7 +1496,7 @@
           <h4>Call / WhatsApp</h4>
           <p><a href="tel:+233244716877">+233 24 471 6877</a><br>Church Office & Counseling</p>
         </div>
-        <a href="https://wa.me/233244716877" target="_blank" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); margin-top: 14px; font-size: 13px; padding: 10px 14px; width: 100%;">
+        <a href="https://wa.me/233244716877" target="_blank" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px;">
           Chat on WhatsApp
         </a>
       </div>
@@ -1367,7 +1509,7 @@
           <h4>Official Email</h4>
           <p><a href="mailto:risenglorychapelgh@gmail.com">risenglorychapelgh@gmail.com</a><br>Administrative enquiries</p>
         </div>
-        <a href="mailto:risenglorychapelgh@gmail.com" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); margin-top: 14px; font-size: 13px; padding: 10px 14px; width: 100%;">
+        <a href="mailto:risenglorychapelgh@gmail.com" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px;">
           Send Email
         </a>
       </div>
@@ -1405,10 +1547,9 @@
       <div class="footer-col">
         <h5>Quick Links</h5>
         <ul class="footer-links">
-          <li><a href="#about">About Our Church</a></li>
+          <li><a href="#about">About Our Ministry</a></li>
           <li><a href="#overseer">General Overseer</a></li>
-          <li><a href="#programs">Weekly Programs</a></li>
-          <li><a href="#featured-event">Widowhood Outreach</a></li>
+          <li><a href="#programs">Weekly Gatherings</a></li>
           <li><a href="gallery.html">Activity Gallery</a></li>
           <li><a href="#consultation">Consultation & Prayer</a></li>
         </ul>
@@ -1443,58 +1584,68 @@
         <button id="whatsappDirectBtn" class="btn-gold" style="width: 100%; justify-content: center;">
           Send Direct Copy to WhatsApp (0244 716877)
         </button>
-        <button id="closeModalBtn" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--grey-400);">
-          Done
+        <button id="closeModalBtn" class="btn-outline" style="color: var(--charcoal); border-color: var(--grey-400);">
+          Close Window
         </button>
       </div>
     </div>
   </div>
 
   <script>
-    const form = document.getElementById('consultationForm');
-    const modal = document.getElementById('successModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const whatsappBtn = document.getElementById('whatsappDirectBtn');
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('consultationForm');
+      const modal = document.getElementById('successModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const whatsappDirectBtn = document.getElementById('whatsappDirectBtn');
 
-    let currentFormData = {};
+      let currentFormData = {};
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const fullName = document.getElementById('fullName').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const requestType = document.getElementById('requestType').value;
-      const message = document.getElementById('message').value.trim();
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
 
-      currentFormData = { fullName, phone, email, requestType, message };
+          currentFormData = {
+            fullName: document.getElementById('fullName').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            requestType: document.getElementById('requestType').value,
+            message: document.getElementById('message').value.trim()
+          };
 
-      modal.style.display = 'flex';
-
-      whatsappBtn.onclick = function() {
-        const text = encodeURIComponent(
-          `*Risen Glory Chapel Enquiry / Consultation*\n\n` +
-          `*Name:* ${fullName}\n` +
-          `*Phone:* ${phone}\n` +
-          (email ? `*Email:* ${email}\n` : '') +
-          `*Type:* ${requestType}\n\n` +
-          `*Message:* ${message}`
-        );
-        window.open(`https://wa.me/233244716877?text=${text}`, '_blank');
-      };
-
-      form.reset();
-    });
-
-    closeModalBtn.addEventListener('click', function() {
-      modal.style.display = 'none';
-    });
-
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
+          modal.classList.add('active');
+          form.reset();
+        });
       }
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+          modal.classList.remove('active');
+        });
+      }
+
+      if (whatsappDirectBtn) {
+        whatsappDirectBtn.addEventListener('click', function() {
+          const text = encodeURIComponent(
+            "Hello Rev. Isaac Opoku Agyemang / Risen Glory Chapel Team,\n\n" +
+            "I have submitted a request via your website:\n" +
+            "• Name: " + currentFormData.fullName + "\n" +
+            "• Phone: " + currentFormData.phone + "\n" +
+            "• Category: " + currentFormData.requestType + "\n" +
+            "• Message: " + currentFormData.message + "\n\n" +
+            "Thank you and God bless you!"
+          );
+          window.open("https://wa.me/233244716877?text=" + text, "_blank");
+          modal.classList.remove('active');
+        });
+      }
+
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
     });
   </script>
+
 </body>
 </html>

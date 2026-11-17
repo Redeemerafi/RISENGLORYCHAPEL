@@ -6,6 +6,7 @@
   <title>Activity Gallery & Flyers | Risen Glory Chapel</title>
   <style>
     :root {
+      --burgundy-950: #29030b;
       --burgundy-900: #3b0610;
       --burgundy-800: #520a17;
       --burgundy-700: #6e0e22;
@@ -80,7 +81,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
     }
 
     .brand {
@@ -98,31 +99,32 @@
       flex-shrink: 0;
     }
 
-    .brand-text h1 {
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
       font-size: 17px;
       font-weight: 800;
       color: var(--burgundy-800);
       line-height: 1.2;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    .brand-text p {
+    .brand-tagline {
       font-size: 11px;
       color: var(--gold-600);
       font-weight: 700;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.3;
     }
 
     .btn-nav-home {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
       background: var(--burgundy-700);
       color: var(--white);
       padding: 9px 16px;
@@ -243,7 +245,7 @@
     }
 
     .gallery-info p {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--grey-600);
       line-height: 1.5;
     }
@@ -301,7 +303,7 @@
 
     /* Footer */
     footer {
-      background: var(--burgundy-900);
+      background: var(--burgundy-950);
       color: var(--white);
       padding: 36px 20px;
       border-top: 4px solid var(--gold-500);
@@ -338,6 +340,16 @@
       .gallery-header h2 {
         font-size: 26px;
       }
+      .brand-title {
+        font-size: 15px;
+      }
+      .brand-tagline {
+        font-size: 10px;
+      }
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
       .social-pill {
         width: 100%;
         justify-content: center;
@@ -351,11 +363,11 @@
       .gallery-card.featured-wide img {
         height: 200px;
       }
-      .brand-text h1 {
+      .brand-title {
         font-size: 14px;
       }
-      .brand-text p {
-        font-size: 10px;
+      .brand-tagline {
+        font-size: 9.5px;
       }
       .btn-nav-home {
         font-size: 12px;
@@ -372,8 +384,8 @@
       <a href="index.html" class="brand">
         <img src="assets/logo.png" alt="Risen Glory Chapel Logo">
         <div class="brand-text">
-          <h1>Risen Glory Chapel</h1>
-          <p>Finding Peace in God's Presence</p>
+          <span class="brand-title">Risen Glory Chapel</span>
+          <span class="brand-tagline">Finding Peace in God's Presence</span>
         </div>
       </a>
       <a href="index.html" class="btn-nav-home">
@@ -410,7 +422,7 @@
           <div>
             <span class="gallery-tag">Weekly Virtual Gathering</span>
             <h3>Tuesday Online Prayer Altar</h3>
-            <p>Join Rev. Isaac Opoku Agyemang every Tuesday from 8:30 PM – 9:30 PM online via Facebook, Google Meet, and TikTok Live for an hour of spiritual renewal and prophetic intercession.</p>
+            <p>Join Rev. Isaac Opoku Agyemang every Tuesday from 8:30 PM to 9:30 PM online via Facebook, Google Meet, and TikTok Live for an hour of spiritual renewal and prophetic intercession.</p>
           </div>
         </div>
       </div>
@@ -422,7 +434,7 @@
           <div>
             <span class="gallery-tag">Weekly Online Gathering</span>
             <h3>Financial Giants (Every Friday Online)</h3>
-            <p>Ministered by Rev. Isaac Opoku Agyemang every Friday from 9:20 PM – 10:00 PM online via WhatsApp, Google Meet, and TikTok Live for financial empowerment and prophetic prayers.</p>
+            <p>Join Rev. Isaac Opoku Agyemang every Friday from 9:20 PM to 10:00 PM online via WhatsApp, Google Meet, and TikTok Live for prophetic prayers and financial empowerment.</p>
           </div>
         </div>
       </div>

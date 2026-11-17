@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Gallery & Flyers | Risen Glory Chapel</title>
+  <style>
+    :root {
+      --burgundy-900: #3b0610;
+      --burgundy-800: #520a17;
+      --burgundy-700: #6e0e22;
+      --burgundy-600: #88142c;
+      --burgundy-50: #fbf1f3;
+      --gold-600: #b8861e;
+      --gold-500: #d4a329;
+      --gold-400: #e6b83f;
+      --gold-100: #fdf5e2;
+      --gold-50: #fffbf3;
+      --dark: #1a1415;
+      --charcoal: #2d2627;
+      --grey-600: #62585a;
+      --grey-400: #9e9395;
+      --grey-200: #e8e2e3;
+      --grey-100: #f5f1f2;
+      --white: #ffffff;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 8px rgba(59, 6, 16, 0.06);
+      --shadow-md: 0 8px 24px rgba(59, 6, 16, 0.08);
+      --shadow-lg: 0 16px 40px rgba(59, 6, 16, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--charcoal);
+      background-color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--grey-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-text h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--burgundy-800);
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--gold-600);
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .btn-nav-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--burgundy-700);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-nav-home:hover {
+      background: var(--burgundy-800);
+      transform: translateY(-1px);
+    }
+
+    /* Gallery Header */
+    .gallery-header {
+      background: var(--burgundy-800);
+      color: var(--white);
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    .gallery-header h2 {
+      font-size: 38px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .gallery-header p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Main Content Area */
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 24px 80px;
+      width: 100%;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 50px;
+    }
+
+    .gallery-card {
+      background: var(--white);
+      border: 1px solid var(--grey-200);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-500);
+    }
+
+    .gallery-card.featured-wide {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      background: var(--grey-100);
+    }
+
+    .gallery-card.featured-wide img {
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .gallery-info {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gallery-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--burgundy-700);
+      background: var(--burgundy-50);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    .gallery-info h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      margin-bottom: 8px;
+    }
+
+    .gallery-info p {
+      font-size: 14px;
+      color: var(--grey-600);
+      line-height: 1.5;
+    }
+
+    /* Notice Box for Future Live Photos */
+    .notice-card {
+      background: var(--gold-50);
+      border: 2px dashed rgba(212, 163, 41, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .notice-card h4 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      margin-bottom: 8px;
+    }
+
+    .notice-card p {
+      font-size: 14px;
+      color: var(--grey-600);
+      max-width: 620px;
+      margin: 0 auto 20px;
+    }
+
+    .social-pills {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .social-pill {
+      background: var(--white);
+      border: 1px solid var(--grey-200);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .social-pill:hover {
+      border-color: var(--burgundy-700);
+      color: var(--burgundy-700);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--burgundy-900);
+      color: var(--white);
+      padding: 40px 24px;
+      border-top: 4px solid var(--gold-500);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-content p {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 860px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-card img {
+        height: 380px;
+      }
+      .gallery-card.featured-wide img {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Risen Glory Chapel Logo">
+        <div class="brand-text">
+          <h1>Risen Glory Chapel</h1>
+          <p>Finding Peace in God's Presence</p>
+        </div>
+      </a>
+      <a href="index.html" class="btn-nav-home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </nav>
+
+  <!-- Gallery Header -->
+  <div class="gallery-header">
+    <h2>Church Media & Activities</h2>
+    <p>Official flyers, programs, and outreach announcements from Risen Glory Chapel.</p>
+  </div>
+
+  <!-- Main Content Area -->
+  <main>
+    <div class="gallery-grid">
+      <!-- Item 1: Wide Official Ministry Banner -->
+      <div class="gallery-card featured-wide">
+        <img src="assets/hero_banner.png" alt="Risen Glory Chapel Official Ministry Banner">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Official Ministry</span>
+            <h3>Risen Glory Chapel & Rev. Isaac Opoku Agyemang</h3>
+            <p>Our ministry is rooted in grace, prayer, and fellowship at Teshie Manhean, LEKMA, Accra. Join us in finding true peace in God's holy presence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Tuesday Online Prayer Altar -->
+      <div class="gallery-card">
+        <img src="assets/tuesday_prayer_altar.png" alt="Tuesday Online Prayer Altar Flyer">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Weekly Virtual Gathering</span>
+            <h3>Tuesday Online Prayer Altar</h3>
+            <p>Join Rev. Isaac Opoku Agyemang every Tuesday from 8:30 PM – 9:30 PM online via Facebook, Google Meet, and TikTok Live for an hour of spiritual renewal and prophetic intercession.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Friday Service -->
+      <div class="gallery-card">
+        <img src="assets/friday_flyer.png" alt="Every Friday Service Flyer">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Weekly In-Person Gathering</span>
+            <h3>Every Friday Service</h3>
+            <p>Join us every Friday at Risen Glory Chapel for an encounter of spiritual breakthrough, prayer, and divine impartation with Rev. Isaac Opoku Agyemang.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Widowhood Support Program Conference -->
+      <div class="gallery-card">
+        <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program Conference Flyer">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Major Community Outreach</span>
+            <h3>Widowhood Support Program Conference</h3>
+            <p>Taking place Sunday, 20th December 2026 at 8:00 AM at Teshie, LEKMA. Supporting widows with foodstuffs, financial contributions, and community care. Donations open until 12th Dec 2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: General Overseer Portrait -->
+      <div class="gallery-card">
+        <img src="assets/pastor_casual.png" alt="Rev. Isaac Opoku Agyemang Portrait">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Spiritual Father & Overseer</span>
+            <h3>Rev. Isaac Opoku Agyemang</h3>
+            <p>Dedicated to prayer, pastoral counseling, and sharing the uncompromised Word of God with love and humility.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: Formal Portrait -->
+      <div class="gallery-card">
+        <img src="assets/pastor.png" alt="Rev. Isaac Opoku Agyemang Formal Portrait">
+        <div class="gallery-info">
+          <div>
+            <span class="gallery-tag">Leadership</span>
+            <h3>General Overseer & Founder</h3>
+            <p>Leading Risen Glory Chapel into greater dimensions of spiritual power and community transformation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notice Card -->
+    <div class="notice-card">
+      <h4>More Live Photos & Videos Coming Soon!</h4>
+      <p>We regularly post worship clips, sermon highlights, and community outreach recaps across our official social media channels. Follow us to stay updated!</p>
+      <div class="social-pills">
+        <a href="https://www.instagram.com/risenglory_chapel/" target="_blank" class="social-pill">
+          Instagram (@risenglory_chapel)
+        </a>
+        <a href="https://www.facebook.com/share/1FJjBFowVW/" target="_blank" class="social-pill">
+          Facebook Page
+        </a>
+        <a href="https://www.tiktok.com/@risenglorychapelgh" target="_blank" class="social-pill">
+          TikTok (@risenglorychapelgh)
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Risen Glory Chapel. All Rights Reserved. | Teshie Manhean, LEKMA, Accra, Ghana.</p>
+      <p>Digital Media & Web Administration by Radikal Creative Technologies.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

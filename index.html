@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Risen Glory Chapel | Finding Peace in God's Presence</title>
-  <meta name="description" content="Welcome to Risen Glory Chapel, Teshie LEKMA, Accra. Led by Rev. Isaac Opoku Agyemang. Join our Tuesday Online Prayer Altar, Friday Financial Giants, and Widowhood Support Program.">
+  <meta name="description" content="Welcome to Risen Glory Chapel, Teshie LEKMA Down Along Agblezaa Off-Manet Road, Accra. Led by Rev. Isaac Opoku Agyemang. Join our Tuesday Prayer Altar, Friday Financial Giants, November Fund Raising, Widowhood Outreach, and 2026 Prophetic Calendar.">
 
   <style>
     :root {
@@ -352,7 +352,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 40px;
     }
 
@@ -514,7 +514,29 @@
       line-height: 1.6;
     }
 
-    /* Programs Section */
+    /* Subsections */
+    .schedule-subsection-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .schedule-subsection-title span {
+      background: var(--burgundy-50);
+      color: var(--burgundy-700);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Programs Grid */
     .programs-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -565,23 +587,29 @@
       line-height: 1.6;
     }
 
-    /* Redesigned Clean Outreach Event Card */
+    /* Special Events Grid */
+    .special-events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+
     .event-card {
       background: var(--gold-50);
       border: 2px solid var(--burgundy-700);
       border-radius: var(--radius-lg);
-      padding: 40px;
-      margin-top: 36px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 36px;
-      align-items: center;
-      box-shadow: var(--shadow-md);
-    }
-
-    .event-card-left {
+      padding: 30px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
 
     .event-badge {
@@ -599,27 +627,39 @@
     }
 
     .event-card h3 {
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 900;
       color: var(--burgundy-900);
-      margin-bottom: 12px;
-      line-height: 1.2;
+      margin-bottom: 10px;
+      line-height: 1.3;
     }
 
     .event-card-desc {
-      font-size: 14.5px;
+      font-size: 14px;
       color: var(--grey-700);
-      margin-bottom: 22px;
+      margin-bottom: 16px;
       line-height: 1.6;
+    }
+
+    .event-scripture {
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--burgundy-800);
+      background: rgba(255, 255, 255, 0.85);
+      border-left: 3px solid var(--gold-500);
+      padding: 10px 14px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 18px;
+      line-height: 1.5;
     }
 
     .event-meta-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-bottom: 24px;
+      gap: 12px;
+      margin-bottom: 20px;
       background: var(--white);
-      padding: 18px;
+      padding: 14px;
       border-radius: var(--radius-md);
       border: 1px solid rgba(212, 163, 41, 0.35);
     }
@@ -630,7 +670,7 @@
     }
 
     .meta-title {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -639,7 +679,7 @@
     }
 
     .meta-detail {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--burgundy-950);
       line-height: 1.3;
@@ -647,15 +687,109 @@
 
     .event-flyer-wrap {
       text-align: center;
+      margin-bottom: 20px;
     }
 
     .event-flyer-wrap img {
       width: 100%;
-      max-width: 420px;
-      margin: 0 auto;
+      height: 280px;
+      object-fit: contain;
+      background: var(--grey-100);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(212, 163, 41, 0.4);
+    }
+
+    /* 2026 Yearly Prophetic Theme & Calendar */
+    .yearly-programme-card {
+      background: var(--white);
+      border: 2px solid var(--gold-500);
+      border-radius: var(--radius-lg);
+      padding: 38px 30px;
+      margin-top: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .yearly-programme-header {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--grey-200);
+    }
+
+    .yearly-programme-header h3 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--burgundy-900);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .yearly-programme-header p {
+      font-size: 15px;
+      color: var(--grey-700);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .yearly-motto-badge {
+      display: inline-block;
+      background: var(--gold-500);
+      color: var(--burgundy-950);
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .yearly-programme-img {
       border-radius: var(--radius-md);
       border: 2px solid var(--gold-500);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-sm);
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .month-card {
+      background: var(--gold-50);
+      border: 1px solid rgba(212, 163, 41, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .month-card:hover {
+      border-color: var(--burgundy-700);
+      background: var(--burgundy-50);
+      transform: translateY(-2px);
+    }
+
+    .month-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--burgundy-900);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .month-focus {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--gold-600);
+      line-height: 1.35;
     }
 
     /* Gallery Teaser Preview */
@@ -670,14 +804,14 @@
 
     .gallery-teaser-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
       margin-bottom: 24px;
     }
 
     .gallery-teaser-grid img {
       width: 100%;
-      height: 250px;
+      height: 230px;
       object-fit: cover;
       border-radius: var(--radius-sm);
       border: 1px solid var(--grey-200);
@@ -1088,21 +1222,24 @@
         grid-template-columns: 1fr;
         gap: 18px;
       }
-      .event-card {
+      .special-events-grid {
         grid-template-columns: 1fr;
-        padding: 24px 18px;
-        gap: 24px;
+        gap: 20px;
       }
-      .event-meta-grid {
+      .yearly-programme-header {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 20px;
+      }
+      .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
       .gallery-teaser-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
       }
       .gallery-teaser-grid img {
-        height: 220px;
+        height: 190px;
       }
       .form-wrapper {
         padding: 26px 18px;
@@ -1162,8 +1299,11 @@
       .overseer-content h3 {
         font-size: 24px;
       }
-      .event-card h3 {
-        font-size: 22px;
+      .calendar-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-teaser-grid {
+        grid-template-columns: 1fr;
       }
       .map-box-header a {
         width: 100%;
@@ -1177,8 +1317,8 @@
 
   <!-- Top Announcement Bar -->
   <div class="top-banner">
-    <span>🕊️ Widowhood Support Program Conference — Sunday, 20th Dec 2026 at Teshie, LEKMA.</span>
-    <a href="#featured-event">View Details & Donate</a>
+    <span>🕊️ Special Gatherings: November Fund Raising (29th Nov) & Widowhood Support Conference (20th Dec).</span>
+    <a href="#programs">View Church Schedule</a>
   </div>
 
   <!-- Main Navigation -->
@@ -1247,8 +1387,8 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div class="ribbon-text">
-          <h4>Church Assembly Location</h4>
-          <p>Teshie Manhean, LEKMA, Accra</p>
+          <h4>Assembly Location</h4>
+          <p>Teshie Manhean, LEKMA Down (Agblezaa Off-Manet)</p>
         </div>
       </div>
     </div>
@@ -1318,12 +1458,18 @@
     </div>
   </section>
 
-  <!-- Weekly Programs Section -->
+  <!-- Weekly Programs & Yearly Schedule Section -->
   <section id="programs">
     <div class="section-header">
-      <div class="section-kicker">Church Schedule</div>
-      <h2 class="section-title">Weekly Services & Gatherings</h2>
-      <p class="section-desc">Join our anointed weekly gatherings. Experience uplifting praise, deep worship, and life-changing biblical revelations.</p>
+      <div class="section-kicker">Church Schedule & Gatherings</div>
+      <h2 class="section-title">Weekly Services, Special Events & 2026 Programme</h2>
+      <p class="section-desc">Experience uplifting praise, deep worship, and life-changing biblical revelations across our weekly online altars, special in-person gatherings, and prophetic monthly themes.</p>
+    </div>
+
+    <!-- Subsection: Weekly Online Services -->
+    <div class="schedule-subsection-title">
+      Weekly Online Services
+      <span>Virtual Altars</span>
     </div>
 
     <div class="programs-grid">
@@ -1346,43 +1492,173 @@
       </div>
     </div>
 
-    <!-- Featured Event Card: Widowhood Support Program Conference -->
-    <div class="event-card" id="featured-event">
-      <div class="event-card-left">
-        <span class="event-badge">Upcoming Major Outreach Conference</span>
-        <h3>Widowhood Support Program Conference</h3>
-        <p class="event-card-desc">
-          Pure religion before God is visiting widows and the vulnerable in their distress. Join hands with Rev. Isaac Opoku Agyemang and Risen Glory Chapel this December as we provide food items, clothing, and financial assistance to widows across our community.
-        </p>
-        
-        <div class="event-meta-grid">
-          <div class="meta-box">
-            <span class="meta-title">Event Date</span>
-            <span class="meta-detail">Sunday, 20th December 2026</span>
+    <!-- Subsection: Upcoming Special Events & Conferences -->
+    <div class="schedule-subsection-title">
+      Upcoming Special Gatherings
+      <span>In-Person Services</span>
+    </div>
+
+    <div class="special-events-grid">
+      <!-- Event 1: November Fund Raising ("Bim Bim" "Bam Bam") -->
+      <div class="event-card">
+        <div>
+          <span class="event-badge">Special Giving & Thanksgiving Service</span>
+          <h3>November Fund Raising ("Bim Bim" "Bam Bam")</h3>
+          <p class="event-card-desc">
+            An extraordinary in-person gathering dedicated to kingdom giving, sacrificial worship, and supernatural harvest. Join Rev. Isaac O. Agyemang and the entire church family for this special covenant service.
+          </p>
+
+          <div class="event-scripture">
+            "Bring my faithful people to me, those who made a covenant with me by giving sacrifices" — Psalms 50:5
           </div>
-          <div class="meta-box">
-            <span class="meta-title">Starting Time</span>
-            <span class="meta-detail">8:00 AM Prompt</span>
+
+          <div class="event-flyer-wrap">
+            <img src="assets/november_fundraising.png" alt="November Fund Raising Flyer">
           </div>
-          <div class="meta-box">
-            <span class="meta-title">Assembly Venue</span>
-            <span class="meta-detail">Risen Glory Chapel, Teshie, LEKMA</span>
-          </div>
-          <div class="meta-box">
-            <span class="meta-title">Donation Cut-off</span>
-            <span class="meta-detail">Kindly give before 12th Dec 2026</span>
+
+          <div class="event-meta-grid">
+            <div class="meta-box">
+              <span class="meta-title">Service Date</span>
+              <span class="meta-detail">Sunday, 29th November 2026</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Time</span>
+              <span class="meta-detail">8:00 AM Prompt</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Venue</span>
+              <span class="meta-detail">Risen Glory Chapel, Teshie</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Celebration Slogan</span>
+              <span class="meta-detail">"Bim Bim" "Bam Bam"</span>
+            </div>
           </div>
         </div>
 
         <div>
-          <a href="#consultation" class="btn-gold">
-            Support & Partner: 0244 716877
+          <a href="#consultation" class="btn-gold" style="width: 100%;">
+            Partner & Giving Enquiries: 0244 716 877
           </a>
         </div>
       </div>
 
-      <div class="event-flyer-wrap">
-        <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program Conference Flyer">
+      <!-- Event 2: Widowhood Support Program Conference -->
+      <div class="event-card" id="featured-event">
+        <div>
+          <span class="event-badge">Upcoming Major Outreach Conference</span>
+          <h3>Widowhood Support Program Conference</h3>
+          <p class="event-card-desc">
+            Pure religion before God is visiting widows and the vulnerable in their distress. Join hands with Rev. Isaac Opoku Agyemang and Risen Glory Chapel this December as we provide food items, clothing, and financial assistance to widows across our community.
+          </p>
+
+          <div class="event-scripture">
+            "Religion that God our Father accepts as pure and faultless is this: to look after orphans and widows in their distress" — James 1:27
+          </div>
+
+          <div class="event-flyer-wrap">
+            <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program Conference Flyer">
+          </div>
+
+          <div class="event-meta-grid">
+            <div class="meta-box">
+              <span class="meta-title">Event Date</span>
+              <span class="meta-detail">Sunday, 20th December 2026</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Starting Time</span>
+              <span class="meta-detail">8:00 AM Prompt</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Assembly Venue</span>
+              <span class="meta-detail">Risen Glory Chapel, Teshie LEKMA</span>
+            </div>
+            <div class="meta-box">
+              <span class="meta-title">Donation Cut-off</span>
+              <span class="meta-detail">Kindly give before 12th Dec 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="#consultation" class="btn-gold" style="width: 100%;">
+            Support Widows: 0244 716 877
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subsection: 2026 Yearly Programme (12 Prophetic Themes) -->
+    <div class="yearly-programme-card">
+      <div class="yearly-programme-header">
+        <div>
+          <span class="yearly-motto-badge">2026 Yearly Prophetic Theme</span>
+          <h3 style="margin-top: 10px;">2026 Our Year Of Divine Encounter</h3>
+          <p>
+            Under the visionary leadership of Rev. Isaac O. Agyemang (Head Pastor), Risen Glory Chapel journeys through twelve distinct prophetic seasons this year. Come and experience the supernatural power of God as each month opens new doors of grace, breakthrough, and kingdom elevation.
+          </p>
+          <div style="font-size: 13.5px; font-weight: 700; color: var(--burgundy-800);">
+            Come and Experience the Power of God • Come & Worship With Us
+          </div>
+        </div>
+        <div>
+          <img src="assets/yearly_programme_2026.png" alt="2026 Yearly Programme Banner" class="yearly-programme-img">
+        </div>
+      </div>
+
+      <h4 style="font-size: 17px; font-weight: 800; color: var(--burgundy-900); margin-bottom: 16px;">
+        The 12 Prophetic Monthly Themes for 2026:
+      </h4>
+
+      <div class="calendar-grid">
+        <div class="month-card">
+          <div class="month-name">January</div>
+          <div class="month-focus">Month of Divine Encounter</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">February</div>
+          <div class="month-focus">Month of Prayer</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">March</div>
+          <div class="month-focus">Month of Seeking God's Presence</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">April</div>
+          <div class="month-focus">Month of Success</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">May</div>
+          <div class="month-focus">Month of Holiness</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">June</div>
+          <div class="month-focus">Month of Evangelism</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">July</div>
+          <div class="month-focus">Month of Marriage</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">August</div>
+          <div class="month-focus">Month of Healing</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">September</div>
+          <div class="month-focus">Month of Double Honour</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">October</div>
+          <div class="month-focus">Month of Pursuit & Purpose</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">November</div>
+          <div class="month-focus">Month of Giving and Sacrifice</div>
+        </div>
+        <div class="month-card">
+          <div class="month-name">December</div>
+          <div class="month-focus">Month of Thanksgiving</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1392,17 +1668,18 @@
     <div class="section-header">
       <div class="section-kicker">Moments & Memories</div>
       <h2 class="section-title">Church Activity Gallery</h2>
-      <p class="section-desc">A snapshot of fellowship, worship, and community missions at Risen Glory Chapel.</p>
+      <p class="section-desc">A snapshot of fellowship, worship, outreach conferences, and prophetic banners at Risen Glory Chapel.</p>
     </div>
 
     <div class="gallery-preview">
       <div class="gallery-teaser-grid">
-        <img src="assets/tuesday_prayer_altar.png" alt="Tuesday Prayer Altar">
-        <img src="assets/friday_flyer.png" alt="Financial Giants Flyer">
+        <img src="assets/yearly_programme_2026.png" alt="2026 Yearly Programme">
+        <img src="assets/november_fundraising.png" alt="November Fund Raising Flyer">
         <img src="assets/widowhood_flyer.png" alt="Widowhood Support Program">
+        <img src="assets/tuesday_prayer_altar.png" alt="Tuesday Prayer Altar">
       </div>
-      <h3>Church Activity & Event Photos</h3>
-      <p>Visit our dedicated gallery page to view snapshots of our weekly gatherings, charity missions, prayer altars, and fellowship moments.</p>
+      <h3>Church Activity & Event Media</h3>
+      <p>Visit our dedicated gallery page to view all official flyers, 2026 yearly banners, weekly altars, and fellowship moments.</p>
       
       <a href="gallery.html" class="btn-gold" style="display: inline-flex;">
         Open Full Photo Gallery Page
@@ -1442,6 +1719,7 @@
               <option value="" disabled selected>Select request category</option>
               <option value="Pastoral Consultation & Counseling">Pastoral Consultation & Counseling</option>
               <option value="Personal Prayer Request">Personal Prayer Request</option>
+              <option value="November Fund Raising Partnership">November Fund Raising Partnership</option>
               <option value="Widowhood Program Support & Donation">Widowhood Program Support & Donation</option>
               <option value="First-Time Visitor / New Member">First-Time Visitor / New Member</option>
               <option value="General Church Enquiry">General Church Enquiry</option>
@@ -1481,7 +1759,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <h4>Location & Assembly</h4>
-          <p>Teshie Manhean, LEKMA<br>Greater Accra Region, Ghana</p>
+          <p>Teshie Manhean, LEKMA Down<br>Along Agblezaa Off-Manet Road<br>Greater Accra Region, Ghana</p>
         </div>
         <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="font-size: 13px; padding: 10px 14px;">
           Get Directions on Google Maps
@@ -1520,7 +1798,7 @@
       <div class="map-box-header">
         <span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--burgundy-700)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Teshie Manhean (LEKMA), Greater Accra Region
+          Teshie Manhean (LEKMA Down Along Agblezaa Off-Manet Road), Greater Accra
         </span>
         <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="font-size: 12px; padding: 8px 14px;">
           Open in Google Maps

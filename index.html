@@ -1715,8 +1715,8 @@
         </div>
 
         <div class="form-submit-row">
-          <button type="submit" class="btn-submit">
-            Submit Request to Pastoral Team
+          <button type="submit" id="submitBtn" class="btn-submit">
+            Submit Request via Email & WhatsApp
           </button>
           <p class="direct-call-hint">
             Urgent prayer or counseling needed? Call or WhatsApp Church Office directly on <a href="tel:+233244716877">+233 24 471 6877</a>.
@@ -1871,14 +1871,18 @@
       <div class="modal-icon">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
-      <h3>Request Received in Faith!</h3>
-      <p id="modalMessage">Thank you for reaching out. Rev. Isaac Opoku Agyemang and the pastoral team have received your request and will reach out to you within 24 hours.</p>
+      <h3>Request Sent Successfully!</h3>
+      <p id="modalMessage">
+        Your details have been sent to our church email (<strong style="color: var(--burgundy-800);">risenglorychapelgh@gmail.com</strong>).
+        <br><br>
+        To get an instant direct response from Rev. Isaac Opoku Agyemang, send a quick copy to WhatsApp below:
+      </p>
       <div class="modal-actions">
         <button id="whatsappDirectBtn" class="btn-gold" style="width: 100%; justify-content: center;">
           Send Direct Copy to WhatsApp (0244 716877)
         </button>
         <button id="closeModalBtn" class="btn-outline" style="color: var(--charcoal); border-color: var(--grey-400);">
-          Close Window
+          Done / Close Window
         </button>
       </div>
     </div>
@@ -1887,6 +1891,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('consultationForm');
+      const submitBtn = document.getElementById('submitBtn');
       const modal = document.getElementById('successModal');
       const closeModalBtn = document.getElementById('closeModalBtn');
       const whatsappDirectBtn = document.getElementById('whatsappDirectBtn');
@@ -1905,8 +1910,35 @@
             message: document.getElementById('message').value.trim()
           };
 
-          modal.classList.add('active');
-          form.reset();
+          const originalBtnText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending Request...';
+          submitBtn.disabled = true;
+
+          // Asynchronously dispatch to church email (risenglorychapelgh@gmail.com) via FormSubmit
+          fetch("https://formsubmit.co/ajax/risenglorychapelgh@gmail.com", {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              "Full Name": currentFormData.fullName,
+              "Phone Number": currentFormData.phone,
+              "Email Address": currentFormData.email || "Not provided",
+              "Request Category": currentFormData.requestType,
+              "Message": currentFormData.message,
+              "_subject": "New Consultation / Prayer Request - " + currentFormData.fullName
+            })
+          })
+          .catch(function(err) {
+            console.log("Email dispatch note:", err);
+          })
+          .finally(function() {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            modal.classList.add('active');
+            form.reset();
+          });
         });
       }
 
@@ -1920,12 +1952,13 @@
         whatsappDirectBtn.addEventListener('click', function() {
           const text = encodeURIComponent(
             "Hello Rev. Isaac Opoku Agyemang / Risen Glory Chapel Team,\n\n" +
-            "I have submitted a request via your website:\n" +
-            "• Name: " + currentFormData.fullName + "\n" +
+            "I have submitted a consultation & prayer request via your website:\n" +
+            "• Full Name: " + currentFormData.fullName + "\n" +
             "• Phone: " + currentFormData.phone + "\n" +
-            "• Category: " + currentFormData.requestType + "\n" +
+            "• Email: " + (currentFormData.email || "Not provided") + "\n" +
+            "• Nature of Request: " + currentFormData.requestType + "\n" +
             "• Message: " + currentFormData.message + "\n\n" +
-            "Thank you and God bless you!"
+            "God bless you!"
           );
           window.open("https://wa.me/233244716877?text=" + text, "_blank");
           modal.classList.remove('active');

@@ -941,9 +941,9 @@
     /* Contact Section */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 36px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
     .contact-card {
@@ -1735,6 +1735,7 @@
     </div>
 
     <div class="contact-grid">
+      <!-- Card 1: Assembly Location -->
       <div class="contact-card">
         <div>
           <div class="icon">
@@ -1743,34 +1744,66 @@
           <h4>Location & Assembly</h4>
           <p>Teshie Manhean, LEKMA Down<br>Along Agblezaa Off-Manet Road<br>Greater Accra Region, Ghana</p>
         </div>
-        <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="font-size: 13px; padding: 10px 14px;">
+        <a href="https://maps.google.com/?q=Risen+Glory+Church+Teshie+Accra" target="_blank" class="btn-gold" style="font-size: 13px; padding: 10px 14px; width: 100%;">
           Get Directions on Google Maps
         </a>
       </div>
 
+      <!-- Card 2: Voice Call Option -->
       <div class="contact-card">
         <div>
           <div class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          <h4>Call / WhatsApp</h4>
-          <p><a href="tel:+233244716877">+233 24 471 6877</a><br>Church Office & Counseling</p>
+          <h4>Direct Phone Call</h4>
+          <p><a href="tel:+233244716877" style="font-weight: 700; color: var(--burgundy-800);">+233 24 471 6877</a><br>Call pastoral office directly</p>
         </div>
-        <a href="https://wa.me/233244716877" target="_blank" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px;">
+        <a href="tel:+233244716877" class="btn-gold" style="font-size: 13px; padding: 10px 14px; width: 100%;">
+          Call 0244 716 877
+        </a>
+      </div>
+
+      <!-- Card 3: WhatsApp Chat Option -->
+      <div class="contact-card">
+        <div>
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <h4>Chat on WhatsApp</h4>
+          <p><a href="https://wa.me/233244716877" target="_blank" style="font-weight: 700; color: var(--burgundy-800);">+233 24 471 6877</a><br>Instant prayer & counseling chat</p>
+        </div>
+        <a href="https://wa.me/233244716877" target="_blank" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px; width: 100%;">
           Chat on WhatsApp
         </a>
       </div>
 
+      <!-- Card 4: Official Email -->
       <div class="contact-card">
         <div>
           <div class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <h4>Official Email</h4>
-          <p><a href="mailto:risenglorychapelgh@gmail.com">risenglorychapelgh@gmail.com</a><br>Administrative enquiries</p>
+          <p><a href="mailto:risenglorychapelgh@gmail.com" style="font-weight: 700; color: var(--burgundy-800); word-break: break-all;">risenglorychapelgh@gmail.com</a><br>Administrative enquiries</p>
         </div>
-        <a href="mailto:risenglorychapelgh@gmail.com" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px;">
+        <a href="mailto:risenglorychapelgh@gmail.com" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 14px; width: 100%;">
           Send Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Direct Contact Bar -->
+    <div style="background: var(--gold-50); border: 1.5px solid var(--gold-500); border-radius: var(--radius-md); padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 28px;">
+      <div>
+        <h4 style="font-size: 16px; font-weight: 800; color: var(--burgundy-900); margin-bottom: 2px;">Need Immediate Prayer or Consultation?</h4>
+        <p style="font-size: 13.5px; color: var(--grey-600); margin: 0;">Our pastoral team is available for phone calls and WhatsApp messages.</p>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="tel:+233244716877" class="btn-gold" style="font-size: 13px; padding: 10px 18px;">
+          Call: 0244 716 877
+        </a>
+        <a href="https://wa.me/233244716877" target="_blank" class="btn-outline" style="color: var(--burgundy-800); border-color: var(--burgundy-700); font-size: 13px; padding: 10px 18px;">
+          Chat on WhatsApp
         </a>
       </div>
     </div>
